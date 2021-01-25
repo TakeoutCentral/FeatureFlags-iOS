@@ -1,0 +1,35 @@
+PODS:
+  - FeatureFlags (1.0.0):
+    - Reusable (~> 4.1)
+  - Nimble (8.0.9)
+  - Quick (2.2.1)
+  - Reusable (4.1.1):
+    - Reusable/Storyboard (= 4.1.1)
+    - Reusable/View (= 4.1.1)
+  - Reusable/Storyboard (4.1.1)
+  - Reusable/View (4.1.1)
+
+DEPENDENCIES:
+  - FeatureFlags (from `../`)
+  - Nimble (~> 8.0.7)
+  - Quick (~> 2.2.0)
+
+SPEC REPOS:
+  trunk:
+    - Nimble
+    - Quick
+    - Reusable
+
+EXTERNAL SOURCES:
+  FeatureFlags:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FeatureFlags: af4aea8a18e0ab478f435b5b6e127f679f5fc4ab
+  Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
+  Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
+  Reusable: 53a9acf5c536f229b31b5865782414b508252ddb
+
+PODFILE CHECKSUM: cca0e39d1f81521a441a9a828bdf6f2ae3d4e9f6
+
+COCOAPODS: 1.10.0
