@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import GenericJSON
 
 extension Feature: Codable {
     fileprivate enum CodingKeys: String, CodingKey {
@@ -26,7 +27,7 @@ extension Feature: Codable {
         _parentName = try container.decodeIfPresent(Feature.Name.self, forKey: .parent)
         _enabled = try container.decode(Bool.self, forKey: .enabled)
         _unlocked = try container.decodeIfPresent(Bool.self, forKey: .unlocked)
-        _value = try container.decodeIfPresent(Value.self, forKey: .value)
+        _value = try container.decodeIfPresent(JSON.self, forKey: .value)
     }
 
     public func encode(to encoder: Encoder) throws {

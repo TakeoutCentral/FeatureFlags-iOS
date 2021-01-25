@@ -6,10 +6,10 @@
 import Foundation
 
 public protocol RemoteConfig {
-    func value<T>(forKey key: String) -> T?
+    func value<T: Decodable>(forKey key: String) -> T?
 }
 
-public class RemoteConfiguration: FeatureFlagsConfiguration {
+final public class RemoteConfiguration: Configuration {
 
     public let priority = 10
 

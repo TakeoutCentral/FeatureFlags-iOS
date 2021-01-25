@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import GenericJSON
 
 public struct Feature {
     public let name: Name
@@ -19,7 +20,7 @@ public struct Feature {
     internal var _enabled: Bool
     internal var _unlocked: Bool?
     internal var _parentName: Name?
-    internal var _value: Value?
+    internal var _value: JSON?
     // swiftlint:enable identifier_name
 
     public static func named(_ name: Feature.Name) -> Feature {
@@ -34,12 +35,13 @@ public struct Feature {
         named(feature).isUnlocked()
     }
 
-    public static func value(for feature: Feature.Name) -> Value? {
+    public static func value(for feature: Feature.Name) -> JSON? {
         named(feature).value()
     }
 
     public func isEnabled() -> Bool {
-        _enabled && parent?.isEnabled() == true
+        guard let parent = parent else { return _enabled }
+        return _enabled && parent.isEnabled()
     }
 
     public func isUnlocked() -> Bool {
@@ -47,7 +49,7 @@ public struct Feature {
         return isEnabled() && type == .unlockFlag && unlocked
     }
 
-    public func value() -> Value? {
+    public func value() -> JSON? {
         guard let value = _value
         else {
             preconditionFailure("Feature \(name) does not have an associated value")
@@ -69,10 +71,5 @@ public struct Feature {
     public mutating func unlock() -> Bool {
         setUnlocked(true)
         return isUnlocked()
-    }
-}
-
-extension Feature {
-    public struct Value: Codable {
     }
 }

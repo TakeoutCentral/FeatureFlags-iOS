@@ -5,7 +5,12 @@
 
 import Foundation
 
-public protocol FeatureFlagsConfiguration {
+public protocol Configuration {
     var priority: Int { get }
     func feature(named name: Feature.Name) -> Feature?
+}
+
+public protocol MutableConfiguration: Configuration {
+    func save(feature: Feature)
+    func resetFeature(named name: Feature.Name)
 }

@@ -1,6 +1,8 @@
 PODS:
   - FeatureFlags (1.0.0):
+    - GenericJSON (~> 2.0)
     - Reusable (~> 4.1)
+  - GenericJSON (2.0.1)
   - Nimble (8.0.9)
   - Quick (2.2.1)
   - Reusable (4.1.1):
@@ -16,6 +18,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - GenericJSON
     - Nimble
     - Quick
     - Reusable
@@ -25,7 +28,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FeatureFlags: af4aea8a18e0ab478f435b5b6e127f679f5fc4ab
+  FeatureFlags: 0042c3d970b7479bcd62dd28b5ae4ebfbc9b55b0
+  GenericJSON: a6e74e2c457f8693caab08e0eafde7d97e6666de
   Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
   Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
   Reusable: 53a9acf5c536f229b31b5865782414b508252ddb

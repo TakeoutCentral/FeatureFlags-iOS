@@ -5,7 +5,7 @@
 
 import Foundation
 
-public class LocalConfiguration: FeatureFlagsConfiguration {
+final public class LocalConfiguration: Configuration {
 
     public let priority = 0
     public let features: [Feature.Section]

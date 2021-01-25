@@ -9,7 +9,7 @@ public class FeatureFlags {
     public static let shared = FeatureFlags()
     private init() {}
 
-    private(set) var configurations = [FeatureFlagsConfiguration]()
+    private(set) var configurations = [Configuration]()
 //    var mutableConfiguration:
     public var useCache = false {
         didSet {
@@ -22,7 +22,7 @@ public class FeatureFlags {
     private let queue = DispatchQueue(label: "takeoutcentral.featureflags")
     private var cache = [String : Feature]()
 
-    public func add(configuration: FeatureFlagsConfiguration) {
+    public func add(configuration: Configuration) {
         configurations.append(configuration)
         configurations.sort { $0.priority > $1.priority }
     }

@@ -24,7 +24,7 @@ FeatureFlags library for Takeout Central
   s.swift_version = '5.0'
 
   s.source_files = 'FeatureFlags/Classes/**/*'
-  
+
   # s.resource_bundles = {
   #   'FeatureFlags' => ['FeatureFlags/Assets/*.png']
   # }
@@ -32,4 +32,5 @@ FeatureFlags library for Takeout Central
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'Reusable', '~> 4.1'
+  s.dependency 'GenericJSON', '~> 2.0'
 end
