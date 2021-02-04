@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FeatureFlags'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'FeatureFlags library for Takeout Central.'
 
   s.description      = <<-DESC
@@ -25,12 +25,6 @@ FeatureFlags library for Takeout Central
 
   s.source_files = 'FeatureFlags/Classes/**/*'
 
-  # s.resource_bundles = {
-  #   'FeatureFlags' => ['FeatureFlags/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'Reusable', '~> 4.1'
   s.dependency 'GenericJSON', '~> 2.0'
 end
