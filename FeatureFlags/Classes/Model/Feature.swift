@@ -27,6 +27,10 @@ public struct Feature {
         FeatureFlags.shared.feature(named: name)
     }
 
+    public static func named(_ name: String) -> Feature? {
+        FeatureFlags.shared.feature(named: name)
+    }
+
     public static func isEnabled(_ feature: Feature.Name) -> Bool {
         named(feature).isEnabled()
     }
@@ -58,7 +62,11 @@ public struct Feature {
     }
 
     internal mutating func setUnlocked(_ unlocked: Bool = true) {
+        guard type == .unlockFlag,
+              _unlocked != unlocked
+        else { return }
         _unlocked = unlocked
+        FeatureFlags.shared.cache(feature: self)
     }
 
     @discardableResult

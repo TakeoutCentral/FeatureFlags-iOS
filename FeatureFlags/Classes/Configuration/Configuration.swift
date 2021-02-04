@@ -7,7 +7,7 @@ import Foundation
 
 public protocol Configuration {
     var priority: Int { get }
-    func feature(named name: Feature.Name) -> Feature?
+    func feature(named name: String) -> Feature?
 }
 
 public protocol MutableConfiguration: Configuration {

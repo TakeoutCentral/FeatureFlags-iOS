@@ -1,9 +1,10 @@
 # FeatureFlags
 
-[![CI Status](https://img.shields.io/travis/mgray88/FeatureFlags.svg?style=flat)](https://travis-ci.org/mgray88/FeatureFlags)
-[![Version](https://img.shields.io/cocoapods/v/FeatureFlags.svg?style=flat)](https://cocoapods.org/pods/FeatureFlags)
-[![License](https://img.shields.io/cocoapods/l/FeatureFlags.svg?style=flat)](https://cocoapods.org/pods/FeatureFlags)
-[![Platform](https://img.shields.io/cocoapods/p/FeatureFlags.svg?style=flat)](https://cocoapods.org/pods/FeatureFlags)
+### Inspired By
+
+- https://github.com/rwbutler/FeatureFlags
+- https://github.com/justeat/JustTweak
+  - https://tech.just-eat.com/2019/11/26/a-smart-feature-flagging-system-for-ios/
 
 ## Example
 

@@ -19,7 +19,7 @@ final public class RemoteConfiguration: Configuration {
         self.remoteConfig = remoteConfig
     }
 
-    public func feature(named name: Feature.Name) -> Feature? {
-        remoteConfig.value(forKey: name.rawValue)
+    public func feature(named name: String) -> Feature? {
+        remoteConfig.value(forKey: name)
     }
 }

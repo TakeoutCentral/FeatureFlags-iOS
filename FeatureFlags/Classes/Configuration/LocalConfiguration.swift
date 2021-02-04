@@ -19,10 +19,10 @@ final public class LocalConfiguration: Configuration {
         // swiftlint:enable force_try
     }
 
-    public func feature(named name: Feature.Name) -> Feature? {
+    public func feature(named name: String) -> Feature? {
         var feature: Feature?
         for section in features {
-            feature = section.features.first(where: { $0.name == name })
+            feature = section.features.first(where: { $0.name.rawValue == name })
             if feature != nil { break }
         }
         return feature
