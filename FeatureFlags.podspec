@@ -25,6 +25,6 @@ FeatureFlags library for Takeout Central
 
   s.source_files = 'FeatureFlags/Classes/**/*'
 
-  s.dependency 'Reusable', '~> 4.1'
+  s.dependency 'Reusable'
   s.dependency 'GenericJSON', '~> 2.0'
 end
