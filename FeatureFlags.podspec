@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FeatureFlags'
-  s.version          = '1.1.0'
+  s.version          = '1.1.1'
   s.summary          = 'FeatureFlags library for Takeout Central.'
 
   s.description      = <<-DESC
