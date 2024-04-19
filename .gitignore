@@ -39,3 +39,6 @@ Carthage/Build
 Example/Pods/
 
 Example/.idea/
+
+.build/
+.swiftpm/

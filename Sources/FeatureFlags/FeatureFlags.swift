@@ -6,7 +6,7 @@
 import Foundation
 
 public class FeatureFlags {
-    private static let shared = FeatureFlags()
+    package static let shared = FeatureFlags()
     private init() {}
 
     private(set) var configurations = [Configuration]()
