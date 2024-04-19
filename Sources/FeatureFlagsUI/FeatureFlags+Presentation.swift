@@ -3,7 +3,7 @@
 // Copyright (c) 2021 Takeout Central. All rights reserved.
 //
 
-import Foundation
+import FeatureFlags
 
 extension FeatureFlags {
 

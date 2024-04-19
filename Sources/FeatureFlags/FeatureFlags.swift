@@ -6,32 +6,49 @@
 import Foundation
 
 public class FeatureFlags {
-    public static let shared = FeatureFlags()
+    private static let shared = FeatureFlags()
     private init() {}
 
     private(set) var configurations = [Configuration]()
 //    var mutableConfiguration:
-    public var useCache = true {
+    internal var useCache = true {
         didSet {
             if useCache != oldValue {
-                resetCache()
+                FeatureFlags.resetCache()
             }
+        }
+    }
+
+    public static var useCache: Bool {
+        get {
+            shared.useCache
+        }
+        set {
+            shared.useCache = newValue
         }
     }
 
     private let queue = DispatchQueue(label: "takeoutcentral.featureflags")
     internal var cache = [String : Feature]()
 
-    public func add(configuration: Configuration) {
+    internal func add(configuration: Configuration) {
         configurations.append(configuration)
         configurations.sort { $0.priority > $1.priority }
     }
 
-    public func feature(named name: Feature.Name) -> Feature {
+    public static func add(configuration: Configuration) {
+        shared.add(configuration: configuration)
+    }
+
+    internal func feature(named name: Feature.Name) -> Feature {
         guard let feature = feature(named: name.rawValue) else {
             preconditionFailure()
         }
         return feature
+    }
+
+    public static func feature(named name: Feature.Name) -> Feature {
+        shared.feature(named: name)
     }
 
     public func feature(named name: String) -> Feature? {
@@ -62,9 +79,9 @@ public class FeatureFlags {
 }
 
 extension FeatureFlags {
-    public func resetCache() {
-        queue.sync {
-            cache = [:]
+    public static func resetCache() {
+        shared.queue.sync {
+            shared.cache = [:]
         }
     }
 }

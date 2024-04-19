@@ -3,8 +3,10 @@
 // Copyright (c) 2021 Takeout Central. All rights reserved.
 //
 
+import FeatureFlags
 import Foundation
 import Reusable
+import UIKit
 
 internal protocol FeatureTableViewCell: UITableViewCell {
     var delegate: FeatureTableViewCellDelegate? { get set }

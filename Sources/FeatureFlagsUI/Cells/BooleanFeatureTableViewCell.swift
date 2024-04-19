@@ -3,8 +3,10 @@
 // Copyright (c) 2021 Takeout Central. All rights reserved.
 //
 
+import FeatureFlags
 import Foundation
 import Reusable
+import UIKit
 
 internal final class BooleanFeatureTableViewCell: UITableViewCell, FeatureTableViewCell, Reusable {
 

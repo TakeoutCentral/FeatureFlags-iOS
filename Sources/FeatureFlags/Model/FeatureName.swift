@@ -12,5 +12,9 @@ extension Feature {
         public init(rawValue: String) {
             self.rawValue = rawValue
         }
+
+        public init(_ rawValue: String) {
+            self.init(rawValue: rawValue)
+        }
     }
 }
